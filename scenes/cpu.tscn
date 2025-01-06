@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://crqn5x827kuiu"]
+
+[ext_resource type="Script" path="res://scripts/cpu.gd" id="1_o4tsl"]
+[ext_resource type="Resource" uid="uid://dgpnnsqa6cl37" path="res://resources/default_data.tres" id="2_8jaoh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b7gg"]
+size = Vector2(33, 158)
+
+[node name="CPU" type="StaticBody2D"]
+script = ExtResource("1_o4tsl")
+cpu_data = ExtResource("2_8jaoh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -76.5
+offset_right = 34.0
+offset_bottom = 76.5
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(15, 0)
+shape = SubResource("RectangleShape2D_6b7gg")
